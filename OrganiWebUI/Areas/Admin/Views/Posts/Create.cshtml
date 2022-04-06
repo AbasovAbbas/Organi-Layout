@@ -1,0 +1,130 @@
+﻿@model Organi.Domain.Entity.Post
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Post</h4>
+<hr />
+
+<ul class="breadcrumb">
+    <li>
+        <p>Paylaşımlar</p>
+    </li>
+    <li>
+        <a class="active">Yeni paylaşım</a>
+    </li>
+</ul>
+<div class="page-title">
+    <i class="icon-custom-left"></i>
+    <h3>
+        <a asp-controller="posts" asp-action="index">Paylaşımlar</a>
+    </h3>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="grid simple">
+            <div class="grid-title no-border">
+                <h4>Yeni paylaşım yaratmaq</h4>
+            </div>
+            <div class="grid-body no-border">
+                <form asp-action="Create" class="row-fluid" method="post" enctype="multipart/form-data" id="blogform">
+                    <div class="form-row">
+                        <div class="form-group col-sm-6 transparent">
+                            <label asp-for="Name" class="control-label"></label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-sm-6" >
+                            <label class="control-label">Teqler</label>
+                            <div class="tagsinput form-control" name="tagList"></div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label asp-for="CategoryId" class="control-label">Kateqoriyası</label>
+                            <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId">
+                                <option selected disabled>Seçim edin</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-sm-12">
+                            <label id="blogFile-viewer" for="blogFile"></label>
+                            <input type="file" name="blogImage" accept="image/x-png,image/gif,image/jpeg" id="blogFile" />
+                        </div>
+
+                        <div class="form-group col-sm-12">
+                            <label asp-for="Body" class="control-label"></label>
+                            <textarea asp-for="Body" class="form-control" style="resize:none;height:300px"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="input-group transparent">
+                        <input type="submit" value="Əlavə et" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+@section scripts{
+    <script src="~/lib/ckeditor5/ckeditor.js"></script>
+    <script src="~/admin/assets/js/taginput.js"></script>
+    <script>
+        $('#blogform').on('keyup keypress', function (e) {
+            var keyCode = e.keyCode || e.which;
+            if (keyCode === 13) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        $('.tagsinput').tagsinput();
+        ClassicEditor
+            .create(document.querySelector('#Body'))
+            .catch(error => {
+                console.error(error);
+            });
+
+        $('#blogFile').change(function (e) {
+
+            let reader = new FileReader();
+
+            reader.addEventListener("load", function () {
+                $('#blogFile-viewer').css({
+                    'background-image': `url(${reader.result})`
+                });
+            }, false);
+
+            reader.readAsDataURL(e.target.files[0]);
+
+        });
+    </script>
+}
+@section css{
+    <link rel="stylesheet" href="~/admin/webarch/css/taginput.min.css" />
+    <style>
+        .ck-editor__editable {
+            min-height: 300px !important;
+        }
+
+        #blogFile {
+            display: none;
+        }
+
+        #blogFile-viewer {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+}
+

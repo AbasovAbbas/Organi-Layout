@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <form id="addproduct">
+                    <div class="from-group">
+                        <label for="image">Image</label>
+                        <input id="image" name="file" class="form-control" type="file" accept="image/*">
+                    </div>
+                    <div class="from-group">
+                        <label for="name">Name</label>
+                        <input id="name" name="Name" class="form-control" type="text">
+                    </div>
+                    <div class="from-group">
+                        <label for="price">Price</label>
+                        <input id="price" name="Price" class="form-control" type="number">
+                    </div>
+                    <div class="from-group">
+                        <label for="unit">Unit</label>
+                        <input id="unit" name="Unit" class="form-control" type="text">
+                    </div>
+                    <div class="from-group">
+                        <label for="quantity">Quantity</label>
+                        <input id="quantity" name="Quantity" class="form-control" type="text">
+                    </div>
+                    <div class="from-group">
+                        <label for="description">Description</label>
+                        <input id="description" name="ShortDescription" class="form-control" type="text">
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/addproduct.js"></script>
+</body>
+</html>

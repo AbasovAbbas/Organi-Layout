@@ -1,0 +1,24 @@
+﻿@model SigninViewModel
+@{ 
+    var msg = TempData["Message"] as string;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    @if (!string.IsNullOrWhiteSpace(msg))
+    {
+        <p>@msg</p>
+    }
+    <form method="post">
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName" /><br />
+
+        <label asp-for="Password"></label>
+        <input asp-for="Password" /><br />
+        <button type="submit">Sign in</button>
+    </form>
+</body>
+</html>

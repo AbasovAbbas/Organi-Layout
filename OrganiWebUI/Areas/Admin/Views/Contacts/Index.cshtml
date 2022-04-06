@@ -1,0 +1,116 @@
+﻿@model PagedViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<div class="row">
+    <div class="col-12">
+        <div class="btn-group btn-group-sm">
+            <a class="btn btn-secondary" asp-action="index" asp-route-typeId="0">All</a>
+            <a class="btn btn-secondary" asp-action="index" asp-route-typeId="1">Not answered</a>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="row" id="inbox-wrapper">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="grid simple">
+                        <div class="grid-body no-border email-body">
+                            <br>
+                            <div class="row-fluid">
+                                <div class="row-fluid dataTables_wrapper">
+                                    <h2 class=" inline">
+                                        Müraciətlər
+                                    </h2>
+                                    <div class="btn-group m-l-10 m-b-10">
+                                        <a class="btn btn-white btn-mini dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret single"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="#">Action</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Another action</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Something else here</a>
+                                            </li>
+                                            <li class="divider">
+                                            </li>
+                                            <li>
+                                                <a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="pull-right margin-top-20">
+                                        <div class="dataTables_paginate paging_bootstrap pagination">
+                                            @Html.Raw(Model.GetPagenation(Url, "Index"))
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                                <div id="email-list">
+                                    <table class="table table-striped table-fixed-layout table-hover" id="emails">
+                                        <thead>
+                                            <tr>
+                                                <th class="small-cell">
+                                                </th>
+                                                <th class="small-cell">
+                                                </th>
+                                                <th class="medium-cell">
+                                                </th>
+                                                <th>
+                                                </th>
+                                                <th class="medium-cell">
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model.Contacts)
+                                            {
+                                            <tr @*data-detail="@Url.Action("Answer",new { id = item.Id })"*@>
+                                                <td class="small-cell v-align-middle">
+                                                    <div class="checkbox check-success">
+                                                        <input id="@($"checkbox{item.Id}")" type="checkbox" value="@item.Id">
+                                                        <label for="@($"checkbox{item.Id}")"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="small-cell v-align-middle">
+                                                    <div class="star">
+                                                        <input checked id="@($"checkbox-fav{item.Id}")" type="checkbox" value="@item.Id">
+                                                        <label for="@($"checkbox-fav{item.Id}")"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="clickable v-align-middle">
+                                                    @item.Name
+                                                </td>
+                                                <td class="clickable tablefull v-align-middle">
+                                                    <span class="muted">
+                                                        @Html.Raw(item.Message)
+                                                    </span>
+                                                </td>
+                                                <td class="clickable">
+                                                    <span class="muted">
+                                                        @item.CreatedDate.ToString("dd.MM.yyyy")
+                                                    </span>
+                                                </td>
+                                                <td class="clickable text-right">
+                                                    <a asp-action="answer" asp-route-id="@item.Id" class="btn btn-primary"><i class="fa fa-location-arrow"></i></a>
+                                                </td>
+                                            </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

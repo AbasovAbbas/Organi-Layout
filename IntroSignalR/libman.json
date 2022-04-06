@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "jquery@3.6.0",
+      "destination": "wwwroot/lib/"
+    },
+    {
+      "library": "jquery.nicescroll@3.7.6",
+      "destination": "wwwroot/jquery.nicescroll/"
+    },
+    {
+      "library": "bootstrap@5.1.1",
+      "destination": "wwwroot/bootstrap/"
+    },
+    {
+      "library": "microsoft-signalr@5.0.9",
+      "destination": "wwwroot/microsoft-signalr/"
+    }
+  ]
+}

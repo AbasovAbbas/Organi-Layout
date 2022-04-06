@@ -1,0 +1,60 @@
+.tagsinput {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    font-size: 8pt;
+    padding: 4px 6px;
+    border: 1px solid #E5E9EC;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    -webkit-transition: background 0.2s linear 0s;
+    transition: background 0.2s linear 0s;
+    vertical-align: middle;
+    max-width: 100%;
+    line-height: 22px;
+    min-height: 22px
+}
+
+    .tagsinput .type {
+        border: none;
+        outline: none !important;
+        background-color: #f3f6fb;
+        display: inline-block;
+        margin: 1px 2px;
+        margin-top: 3px;
+        padding: 4px 8px;
+        line-height: 20px;
+        min-height: 20px;
+        font-size: 8pt
+    }
+
+    .tagsinput .tag {
+        vertical-align: middle;
+        display: inline-block;
+        margin: 1px 2px;
+        margin-top: 3px;
+        padding: 4px 8px;
+        border-radius: 3px;
+        line-height: 9pt;
+        color: white
+    }
+
+        .tagsinput .tag [data-role='remove'] {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            color: #ffffff;
+            position: relative;
+            right: -7px;
+            cursor: pointer
+        }
+
+    .tagsinput .label-info {
+        background-color: #0090d9;
+        color: #ffffff
+    }
+/*# sourceMappingURL=taginput.min.css.map */

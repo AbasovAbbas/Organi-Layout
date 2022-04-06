@@ -1,0 +1,35 @@
+﻿@model List<Product>
+<div class="latest-product__text">
+    <h4>@ViewBag.CategoryTitle</h4>
+    <div class="latest-product__slider owl-carousel">
+        <div class="latest-prdouct__slider__item">
+            @foreach (var product in Model)
+            {
+                <a asp-controller="shop" asp-action="details" asp-route-id="@product.Id" class="latest-product__item">
+                    <div class="latest-product__item__pic">
+                        <img src="~/uploads/@product.Images.FirstOrDefault(i => i.IsMain==true).Path" alt="">
+                    </div>
+                    <div class="latest-product__item__text">
+                        <h6>@product.Name</h6>
+                        <span>$@product.Price</span>
+                    </div>
+                </a>
+
+            }
+        </div>
+        <div class="latest-prdouct__slider__item">
+            @foreach (var product in Model)
+            {
+                <a asp-controller="shop" asp-action="details" asp-route-id="@product.Id" class="latest-product__item">
+                    <div class="latest-product__item__pic">
+                        <img src="~/uploads/@product.Images.FirstOrDefault(i => i.IsMain==true).Path" alt="">
+                    </div>
+                    <div class="latest-product__item__text">
+                        <h6>@product.Name</h6>
+                        <span>$@product.Price</span>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+</div>

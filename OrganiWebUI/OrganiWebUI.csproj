@@ -1,0 +1,260 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>6210483c-e5b4-4cbd-8758-76829e605942</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\uploads\product-details-1.jpg" />
+    <Content Remove="wwwroot\uploads\thumb-1.jpg" />
+    <Content Remove="wwwroot\uploads\thumb-2.jpg" />
+    <Content Remove="wwwroot\uploads\thumb-3.jpg" />
+    <Content Remove="wwwroot\uploads\thumb-4.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\admin\assets\js\calender.js" />
+    <None Include="wwwroot\admin\assets\js\charts.js" />
+    <None Include="wwwroot\admin\assets\js\chat.js" />
+    <None Include="wwwroot\admin\assets\js\dashboard.js" />
+    <None Include="wwwroot\admin\assets\js\dashboard_v2.js" />
+    <None Include="wwwroot\admin\assets\js\datatables.js" />
+    <None Include="wwwroot\admin\assets\js\email_comman.js" />
+    <None Include="wwwroot\admin\assets\js\form_elements.js" />
+    <None Include="wwwroot\admin\assets\js\form_validations.js" />
+    <None Include="wwwroot\admin\assets\js\google_maps.js" />
+    <None Include="wwwroot\admin\assets\js\group_list.js" />
+    <None Include="wwwroot\admin\assets\js\icon.js" />
+    <None Include="wwwroot\admin\assets\js\notifications.js" />
+    <None Include="wwwroot\admin\assets\js\search_results.js" />
+    <None Include="wwwroot\admin\assets\js\support_ticket.js" />
+    <None Include="wwwroot\admin\assets\js\taginput.js" />
+    <None Include="wwwroot\admin\assets\js\vector_maps.js" />
+    <None Include="wwwroot\admin\assets\js\widgets.js" />
+    <None Include="wwwroot\admin\assets\plugins\boostrap-clockpicker\bootstrap-clockpicker.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\boostrap-form-wizard\js\jquery.bootstrap.wizard.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\boostrap-slider\js\bootstrap-slider.js" />
+    <None Include="wwwroot\admin\assets\plugins\bootstrap-colorpicker\js\bootstrap-colorpicker.js" />
+    <None Include="wwwroot\admin\assets\plugins\bootstrap-datepicker\js\bootstrap-datepicker.js" />
+    <None Include="wwwroot\admin\assets\plugins\bootstrap-select2\select2.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\bootstrap-tag\bootstrap-tagsinput.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\bootstrap-timepicker\js\bootstrap-timepicker.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\bootstrap-wysihtml5\bootstrap-wysihtml5.js" />
+    <None Include="wwwroot\admin\assets\plugins\bootstrap-wysihtml5\wysihtml5-0.3.0.js" />
+    <None Include="wwwroot\admin\assets\plugins\bootstrapv3\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\admin\assets\plugins\bootstrapv3\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\admin\assets\plugins\bootstrapv3\js\bootstrap.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\datatables-responsive\js\datatables.responsive.js" />
+    <None Include="wwwroot\admin\assets\plugins\datatables-responsive\js\lodash.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\dropzone\dropzone.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\font-awesome\fonts\fontawesome-webfont93e3.svg" />
+    <None Include="wwwroot\admin\assets\plugins\font-awesome\fonts\fontawesome-webfont93e3.woff2" />
+    <None Include="wwwroot\admin\assets\plugins\fullcalendar\fullcalendar.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\ios-switch\ios7-switch.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-autonumeric\autoNumeric.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-block-ui\jqueryblockui.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-block-ui\jqueryblockui.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-datatable\extra\js\dataTables.tableTools.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-datatable\js\jquery.dataTables.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-easy-pie-chart\js\jquery.easypiechart.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-flot\jquery.flot.animator.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-flot\jquery.flot.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-flot\jquery.flot.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-flot\jquery.flot.orderBars.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-flot\jquery.flot.selection.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-flot\jquery.flot.time.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-gmap\gmaps.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-inputmask\jquery.inputmask.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-jvectormap\js\jquery-jvectormap-1.2.2.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-jvectormap\js\jquery-jvectormap-us-lcc-en.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-jvectormap\js\jquery-jvectormap-world-mill-en.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-metrojs\MetroJs.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-mixitup\jquery.mixitup.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-morris-chart\js\morris.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-nestable\jquery.nestable.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-notifications\js\demo\demo.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-notifications\js\demo\location-sel.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-notifications\js\demo\theme-sel.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-notifications\js\messenger-theme-future.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-notifications\js\messenger.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-numberAnimate\jquery.animateNumbers.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-ricksaw-chart\js\d3.v2.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-ricksaw-chart\js\raphael-min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-ricksaw-chart\js\rickshaw.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-scrollbar\jquery.scrollbar.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-slider\jquery.sidr.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-sparkline\jquery-sparkline.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-superbox\js\superbox.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-ui-touch\jquery.ui.touch-punch.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-ui\jquery-ui-1.10.1.custom.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-unveil\jquery.unveil.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery-validation\js\jquery.validate.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\jquery\jquery-1.11.3.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\Mapplic\js\hammer.js" />
+    <None Include="wwwroot\admin\assets\plugins\Mapplic\js\jquery.easing.js" />
+    <None Include="wwwroot\admin\assets\plugins\Mapplic\js\jquery.mousewheel.js" />
+    <None Include="wwwroot\admin\assets\plugins\Mapplic\mapplic\images\closedhand.cur" />
+    <None Include="wwwroot\admin\assets\plugins\Mapplic\mapplic\images\openhand.cur" />
+    <None Include="wwwroot\admin\assets\plugins\Mapplic\mapplic\mapplic.js" />
+    <None Include="wwwroot\admin\assets\plugins\modernizr.js" />
+    <None Include="wwwroot\admin\assets\plugins\owl-carousel\owl.carousel.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\pace\pace.min.js" />
+    <None Include="wwwroot\admin\assets\plugins\shape-hover\fonts\codropsicons\codropsicons.svg" />
+    <None Include="wwwroot\admin\assets\plugins\shape-hover\js\snap.svg-min.js" />
+    <None Include="wwwroot\admin\assets\plugins\skycons\skycons.js" />
+    <None Include="wwwroot\admin\webarch\css\taginput.min.css.map" />
+    <None Include="wwwroot\admin\webarch\fonts\custom-set.svg" />
+    <None Include="wwwroot\admin\webarch\js\webarch.js" />
+    <None Include="wwwroot\assets\css\bootstrap.min.css" />
+    <None Include="wwwroot\assets\css\elegant-icons.css" />
+    <None Include="wwwroot\assets\css\font-awesome.min.css" />
+    <None Include="wwwroot\assets\css\images\ui-icons_444444_256x240.html" />
+    <None Include="wwwroot\assets\css\images\ui-icons_555555_256x240.html" />
+    <None Include="wwwroot\assets\css\images\ui-icons_777620_256x240.html" />
+    <None Include="wwwroot\assets\css\images\ui-icons_777777_256x240.html" />
+    <None Include="wwwroot\assets\css\images\ui-icons_cc0000_256x240.html" />
+    <None Include="wwwroot\assets\css\images\ui-icons_ffffff_256x240.html" />
+    <None Include="wwwroot\assets\css\jquery-ui.min.css" />
+    <None Include="wwwroot\assets\css\nice-select.css" />
+    <None Include="wwwroot\assets\css\owl.carousel.min.css" />
+    <None Include="wwwroot\assets\css\owl.video.play.html" />
+    <None Include="wwwroot\assets\css\slicknav.min.css" />
+    <None Include="wwwroot\assets\css\style.css" />
+    <None Include="wwwroot\assets\css\style.css.map" />
+    <None Include="wwwroot\assets\css\style.min.css" />
+    <None Include="wwwroot\assets\css\style.min.css.map" />
+    <None Include="wwwroot\assets\fonts\ElegantIcons.eot" />
+    <None Include="wwwroot\assets\fonts\ElegantIcons.svg" />
+    <None Include="wwwroot\assets\fonts\ElegantIcons.ttf" />
+    <None Include="wwwroot\assets\fonts\ElegantIcons.woff" />
+    <None Include="wwwroot\assets\fonts\ElegantIconsd41d.eot" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont3e6e.eot" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont3e6e.svg" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont3e6e.ttf" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont3e6e.woff" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont3e6e.woff2" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfontd41d.eot" />
+    <None Include="wwwroot\assets\img\banner\banner-1.jpg" />
+    <None Include="wwwroot\assets\img\banner\banner-2.jpg" />
+    <None Include="wwwroot\uploads\blog-1.jpg" />
+    <None Include="wwwroot\uploads\blog-2.jpg" />
+    <None Include="wwwroot\uploads\blog-3.jpg" />
+    <None Include="wwwroot\uploads\blog-4.jpg" />
+    <None Include="wwwroot\uploads\blog-5.jpg" />
+    <None Include="wwwroot\assets\img\blog\details\details-author.jpg" />
+    <None Include="wwwroot\assets\img\blog\details\details-hero.jpg" />
+    <None Include="wwwroot\assets\img\blog\details\details-pic.jpg" />
+    <None Include="wwwroot\assets\img\blog\sidebar\sr-1.jpg" />
+    <None Include="wwwroot\assets\img\blog\sidebar\sr-2.jpg" />
+    <None Include="wwwroot\assets\img\blog\sidebar\sr-3.jpg" />
+    <None Include="wwwroot\assets\img\breadcrumb.jpg" />
+    <None Include="wwwroot\assets\img\cart\cart-1.jpg" />
+    <None Include="wwwroot\assets\img\cart\cart-2.jpg" />
+    <None Include="wwwroot\assets\img\cart\cart-3.jpg" />
+    <None Include="wwwroot\assets\img\categories\cat-1.jpg" />
+    <None Include="wwwroot\assets\img\categories\cat-2.jpg" />
+    <None Include="wwwroot\assets\img\categories\cat-3.jpg" />
+    <None Include="wwwroot\assets\img\categories\cat-4.jpg" />
+    <None Include="wwwroot\assets\img\categories\cat-5.jpg" />
+    <None Include="wwwroot\assets\img\featured\feature-1.jpg" />
+    <None Include="wwwroot\assets\img\featured\feature-2.jpg" />
+    <None Include="wwwroot\assets\img\featured\feature-3.jpg" />
+    <None Include="wwwroot\assets\img\featured\feature-4.jpg" />
+    <None Include="wwwroot\assets\img\featured\feature-5.jpg" />
+    <None Include="wwwroot\assets\img\featured\feature-6.jpg" />
+    <None Include="wwwroot\assets\img\featured\feature-7.jpg" />
+    <None Include="wwwroot\assets\img\featured\feature-8.jpg" />
+    <None Include="wwwroot\assets\img\hero\banner.jpg" />
+    <None Include="wwwroot\assets\img\img-rendering.gif" />
+    <None Include="wwwroot\assets\img\en.png" />
+    <None Include="wwwroot\assets\img\latest-product\lp-1.jpg" />
+    <None Include="wwwroot\assets\img\latest-product\lp-2.jpg" />
+    <None Include="wwwroot\assets\img\latest-product\lp-3.jpg" />
+    <None Include="wwwroot\uploads\logo.png" />
+    <None Include="wwwroot\assets\img\payment-item.png" />
+    <None Include="wwwroot\assets\img\product\details\product-details-1.jpg" />
+    <None Include="wwwroot\assets\img\product\details\thumb-1.jpg" />
+    <None Include="wwwroot\assets\img\product\details\thumb-2.jpg" />
+    <None Include="wwwroot\assets\img\product\details\thumb-3.jpg" />
+    <None Include="wwwroot\assets\img\product\details\thumb-4.jpg" />
+    <None Include="wwwroot\assets\img\product\discount\pd-1.jpg" />
+    <None Include="wwwroot\assets\img\product\discount\pd-2.jpg" />
+    <None Include="wwwroot\assets\img\product\discount\pd-3.jpg" />
+    <None Include="wwwroot\assets\img\product\discount\pd-4.jpg" />
+    <None Include="wwwroot\assets\img\product\discount\pd-5.jpg" />
+    <None Include="wwwroot\assets\img\product\discount\pd-6.jpg" />
+    <None Include="wwwroot\assets\img\product\product-1.jpg" />
+    <None Include="wwwroot\assets\img\product\product-10.jpg" />
+    <None Include="wwwroot\assets\img\product\product-11.jpg" />
+    <None Include="wwwroot\assets\img\product\product-12.jpg" />
+    <None Include="wwwroot\assets\img\product\product-2.jpg" />
+    <None Include="wwwroot\assets\img\product\product-3.jpg" />
+    <None Include="wwwroot\assets\img\product\product-4.jpg" />
+    <None Include="wwwroot\assets\img\product\product-5.jpg" />
+    <None Include="wwwroot\assets\img\product\product-6.jpg" />
+    <None Include="wwwroot\assets\img\product\product-7.jpg" />
+    <None Include="wwwroot\assets\img\product\product-8.jpg" />
+    <None Include="wwwroot\assets\img\product\product-9.jpg" />
+    <None Include="wwwroot\assets\js\bootstrap.min.js" />
+    <None Include="wwwroot\assets\js\imager.js" />
+    <None Include="wwwroot\assets\js\jquery-3.3.1.min.js" />
+    <None Include="wwwroot\assets\js\jquery-ui.min.js" />
+    <None Include="wwwroot\assets\js\jquery.nice-select.min.js" />
+    <None Include="wwwroot\assets\js\jquery.slicknav.js" />
+    <None Include="wwwroot\assets\js\main.js" />
+    <None Include="wwwroot\assets\js\mixitup.min.js" />
+    <None Include="wwwroot\assets\js\owl.carousel.min.js" />
+    <None Include="wwwroot\uploads\product-details-1.jpg" />
+    <None Include="wwwroot\uploads\thumb-1.jpg" />
+    <None Include="wwwroot\uploads\thumb-2.jpg" />
+    <None Include="wwwroot\uploads\thumb-3.jpg" />
+    <None Include="wwwroot\uploads\thumb-4.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Organi.Domain\Organi.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="appCode\Resources\LayoutResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LayoutResource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="appCode\Resources\LayoutResource.en.resx">
+      <CustomToolNamespace>Organi.Resources</CustomToolNamespace>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="appCode\Resources\LayoutResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LayoutResource.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Organi.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

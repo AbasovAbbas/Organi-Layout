@@ -1,0 +1,109 @@
+﻿@model IEnumerable<Post>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@section css{
+    <style>
+        img {
+            width: 35px;
+        }
+    </style>
+}
+
+<div class="content">
+    <ul class="breadcrumb">
+        <li>
+            <p>Ana səhifə</p>
+        </li>
+        <li>
+            <a href="#" class="active">Paylaşımlar</a>
+        </li>
+    </ul>
+    <div class="page-title">
+        <i class="icon-custom-left"></i>
+        <h3><a asp-controller="dashboard" asp-action="index">Ana səhifə</a></h3>    
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="grid simple">
+                <div class="grid-body no-border">
+                    <table class="table table-striped no-more-tables table-imaged">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Name)
+                                </th>
+                                <th class="text-center">
+                                    @Html.DisplayNameFor(model => model.Category)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Body)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Author)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Tags)
+                                </th>
+                                
+                                <th class="operate-cell">
+                                    <a asp-action="Create" class="btn btn-sm btn-success">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <img class="img-fluid" src="~/uploads/@item.ImagePath" />
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Name)
+                                    </td>
+                                    <td class="text-center">
+                                        @Html.DisplayFor(modelItem => item.Category.Name)
+                                    </td>
+                                    <td>
+                                        @if (item.Body.Length > 100)
+                                        {
+                                            @Html.Raw($"{item.Body.Substring(0, 100)}...")
+                                        }
+                                        else
+                                        {
+                                            @Html.Raw(item.Body)
+                                        }
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Author)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Tags)
+                                    </td>
+                                
+                                    <td class="operate-cell">
+                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+                                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-dark">
+                                            <i class="fa fa-location-arrow"></i>
+                                        </a>
+                                        <a 
+                                           asp-action="delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,111 @@
+﻿@model IEnumerable<Organi.Domain.Entity.AppInfo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AppTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogoPath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageLink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HashTag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpenTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FacebookLink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InstagramLink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Githublink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TwitterLink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PinterestLink)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogoPath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImageLink)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HashTag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpenTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FacebookLink)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstagramLink)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Githublink)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TwitterLink)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PinterestLink)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

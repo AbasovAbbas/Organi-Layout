@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Subscribe>
+
+@{
+    ViewData["Title"] = "Index";
+
+    string message = TempData["message"] as string;
+}
+
+<div class="content">
+    <ul class="breadcrumb">
+        <li>
+            <p>Ana səhifə</p>
+        </li>
+        <li>
+            <a href="#" class="active">Kateqoriyalar</a>
+        </li>
+    </ul>
+    <div class="page-title">
+        <i class="icon-custom-left"></i>
+        <h3><a asp-controller="Dashboard" asp-action="index">Ana səhifə</a></h3>
+    </div>
+    @if (!string.IsNullOrWhiteSpace(message))
+    {
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-success">
+                    @message
+                </div>
+            </div>
+        </div>
+    }
+    <div class="row">
+        <div class="col-md-12">
+            <div class="grid simple">
+                <div class="grid-body no-border" style="padding-top:26px">
+                    <table class="table table-striped no-more-tables">
+                        <thead>
+                            <tr>
+                                <th class="small-cell"></th>
+                                <th class="medium-cell"></th>
+                                <th class="operate-cell"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td style="vertical-align:middle">
+                                        <div class="checkbox check-success">
+                                            <input id="@($"checkbox{item.Id}")" type="checkbox" value="@item.Id">
+                                            <label for="@($"checkbox{item.Id}")"></label>
+                                        </div>
+                                    </td>
+                                    <td style="vertical-align:middle">
+                                        @item.Email
+                                    </td>
+                                    <td class="operate-cell">
+                                        <a asp-action="Send" asp-route-id="@item.Id" class="btn btn-sm btn-dark">
+                                            <i class="fa fa-location-arrow"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

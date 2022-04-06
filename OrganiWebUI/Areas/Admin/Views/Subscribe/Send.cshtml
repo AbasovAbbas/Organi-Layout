@@ -1,0 +1,86 @@
+﻿@model Subscribe
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="content">
+    <div class="row">
+        <form method="post" class="col-md-12 animated fadeIn" id="preview-email-wrapper">
+            <input type="hidden" asp-for="Id" />
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="grid simple">
+                        <div class="grid-body no-border">
+                            <div class="">
+                                <h1 id="emailheading">
+                                    Müraciət
+                                </h1>
+                                <br>
+                                <div class="control">
+                                    <div class="form-group">
+                                        <label class="control-label">Kimə</label>
+                                        <div class="tagsinput form-control" name="emails"
+                                             data-value="@Model.Email"></div>
+                                    </div>
+                                </div>
+                                <div class="control">
+                                    <div class="form-group">
+                                        <label class="control-label">Mövzu</label>
+                                        <input name="subject" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="control">
+                                    <div class="form-group">
+                                        <label class="control-label">Mətn</label>
+                                        <textarea name="message" class="form-control" style="resize:none;height:300px" id="Answer"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-10">
+                                        <button type="submit" class="btn btn-dark">Göndər</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/lib/ckeditor5/ckeditor.js"></script>
+    <script src="~/admin/assets/js/taginput.js"></script>
+    <script>
+        $('#nav-header-controls a.dropdown-toggle').removeClass('active').eq(1).addClass('active');
+
+        $('#preview-email-wrapper').on('keyup keypress', function (e) {
+            var keyCode = e.keyCode || e.which;
+            if (keyCode === 13) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        $('.tagsinput').tagsinput({
+            regex: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+        });
+
+        ClassicEditor
+            .create(document.querySelector('#Answer'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+}
+
+@section css{
+    <link rel="stylesheet" href="~/admin/webarch/css/taginput.min.css" />
+    <style>
+        .ck-editor__editable {
+            min-height: 300px !important;
+        }
+    </style>
+}
